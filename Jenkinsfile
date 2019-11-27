@@ -1,8 +1,9 @@
 pipeline {
-    agent none
+    agent {
+        label 'master'
+    }
     stages {
         stage('build') {
-            agent none
             steps {
                 sh 'ls -lart'
             }
